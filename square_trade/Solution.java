@@ -1,3 +1,5 @@
+package square_trade;
+
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,6 +14,14 @@ class Solution {
     private static final int NAME = 1;
     private static final int KEY_WORD = 2;
     private static final int PARENT = 3;
+
+    public static void main( String args[] ) {
+        Solution solution = new Solution();
+        String[] answer = solution.solution(3);
+        for (String ans : answer) {
+            System.out.println(ans);
+        }   
+    }
     
     public String[] solution(int categoryId) {
 
@@ -41,6 +51,7 @@ class Solution {
         return keyWords.split(", ");
     }
 
+    // Inner Class
     public class Category {
         private int id;
         private String name;
@@ -61,6 +72,7 @@ class Solution {
         public String getParentIdAsString() { return String.valueOf(getParentId()); }
     }
 
+    // Inner Class
     public class CategoryFactory {
 
         public Map<Integer, Category> toMap(Object[][] data) {
@@ -78,6 +90,7 @@ class Solution {
         }
     }
 
+    // Inner Class
     public class CategoryRepository {
 
         public Object[][] getAllCategories() {
