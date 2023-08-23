@@ -1,10 +1,6 @@
-/*  */
-package exceptions;
-
 import java.util.Scanner;
 
 public class DivideByZeroNoExceptionHandling {
-
     
     // demonstra o disparo de uma exceção quando ocorre uma divisão por zero
     public static int quotient( int numerator, int denominator ) {
